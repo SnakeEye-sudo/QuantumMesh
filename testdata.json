@@ -1,0 +1,31 @@
+{
+  "num_qubits": 3,
+  "gates": [
+    {
+      "type": "Hadamard",
+      "qubit": 0
+    },
+    {
+      "type": "Hadamard",
+      "qubit": 1
+    },
+    {
+      "type": "CNOT",
+      "control": 0,
+      "target": 2
+    },
+    {
+      "type": "CNOT",
+      "control": 1,
+      "target": 2
+    },
+    {
+      "type": "Hadamard",
+      "qubit": 2
+    },
+    {
+      "type": "Measurement",
+      "qubit": 2
+    }
+  ]
+}
