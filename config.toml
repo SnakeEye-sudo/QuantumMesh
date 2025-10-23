@@ -1,0 +1,46 @@
+# QuantumMesh Configuration File
+# Simulation parameters and system settings
+
+[simulation]
+max_qubits = 40
+default_backend = "gpu"
+fault_tolerance = true
+precision = "double"
+state_vector_format = "dense"
+
+[gpu]
+enabled = true
+device_id = 0
+max_memory_mb = 8192
+thread_block_size = 256
+use_tensor_cores = true
+
+[optimization]
+circuit_optimization = true
+gate_fusion = true
+remove_redundant_gates = true
+optimization_level = 2
+
+[distributed]
+enabled = false
+master_node = "localhost:8080"
+worker_nodes = []
+load_balancing = "round_robin"
+
+[visualization]
+real_time = true
+update_interval_ms = 100
+max_states_displayed = 16
+color_scheme = "quantum"
+
+[api]
+port = 8080
+host = "0.0.0.0"
+max_connections = 100
+timeout_seconds = 300
+
+[logging]
+level = "info"
+output = "console"
+file_path = "quantummesh.log"
+verbose = false
